@@ -1,0 +1,27 @@
+/* Sidebar tidy styles */
+.sidebar { 
+  width:220px; background:#111; color:#e5e7eb; padding:18px; 
+  display:flex; flex-direction:column; gap:14px;
+}
+.sidebar-brand {
+  font-weight:800; font-size:20px; letter-spacing:.5px; color:#fff; 
+  margin-bottom:4px;
+}
+
+.nav-section { display:flex; flex-direction:column; gap:6px; }
+.nav-section-title {
+  font-size:12px; text-transform:uppercase; color:#9ca3af; letter-spacing:.08em;
+  margin:6px 0 4px; padding:4px 8px;
+}
+.nav-item {
+  display:flex; align-items:center; gap:8px;
+  color:#e5e7eb; text-decoration:none; padding:8px 10px; border-radius:8px;
+  border:1px solid transparent;
+}
+.nav-item:hover { background:#1f2937; border-color:#334155; }
+.nav-item.active { background:#0ea5e9; color:#06121a; border-color:#0ea5e9; }
+.nav-item .icon { width:18px; text-align:center; filter:grayscale(.1); }
+.nav-footer { margin-top:auto; border-top:1px solid #1f2937; padding-top:10px; display:flex; flex-direction:column; gap:6px; }
+.nav-footer .user { 
+  font-size:13px; color:#9ca3af; margin-bottom:4px; padding:0 8px;
+}
