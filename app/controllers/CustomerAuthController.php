@@ -54,6 +54,7 @@ class CustomerAuthController {
         Auth::redirectAfterLogin('cars');
     }
 
+    
     public function logout() {
         Auth::logout('customer');
         header("Location: index.php");

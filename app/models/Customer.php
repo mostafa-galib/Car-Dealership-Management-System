@@ -22,4 +22,6 @@ class Customer {
         $stmt->bind_param('ssss', $name, $email, $phone, $passwordPlain);
         return $stmt->execute();
     }
+
+    
 }

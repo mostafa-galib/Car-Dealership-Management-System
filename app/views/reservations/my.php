@@ -12,7 +12,7 @@
   .content { flex:1; padding:20px; }
   .table { width:100%; border-collapse:collapse; }
   .table th, .table td { border:1px solid #ddd; padding:8px; }
-  .btn{display:inline-block;padding:6px 10px;border:1px solid #333;border-radius:6px;background:#f7f7f7;text-decoration:none}
+  .btn{display:inline-block;padding:8px 12px;border:1px solid #333;border-radius:6px;background:#f7f7f7;text-decoration:none}
   .btn.danger{background:#dc3545;color:#fff;border-color:#dc3545}
   form{display:inline}
 </style>
@@ -25,11 +25,18 @@
       <h2>My Reservations</h2>
       <div>
         <?php if (!empty($_SESSION['customer_id'])): ?>
-          Hello, <?= htmlspecialchars($_SESSION['customer_name'] ?? 'Customer') ?> |
-          <a href="index.php?route=customer/logout">Logout</a>
-        <?php else: ?>
-          <a href="index.php?route=customer/login">Login</a>
-        <?php endif; ?>
+            Hello, <?= htmlspecialchars($_SESSION['customer_name'] ?? 'Customer') ?>
+            <a href="index.php?route=customer/profile" title="Edit profile"
+              style="display:inline-flex;align-items:center;justify-content:center;
+            width:35px;height:35px;margin:0 6px;vertical-align:middle;
+            border:1px solid #ccc;border-radius:20%;background:#fff;padding:0;">
+              <img src="assets/img/profile.png" alt="Profile" style="width:16px;height:16px;display:block;">
+            </a>
+            <a class="btn" href="index.php?route=customer/logout" style="vertical-align:middle">Logout</a>
+          <?php else: ?>
+            <a class="btn" href="index.php?route=customer/login">Customer Login</a>
+            <a class="btn" href="index.php?route=customer/register">Register</a>
+          <?php endif; ?>
       </div>
     </header>
 
